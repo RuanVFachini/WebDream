@@ -2,6 +2,11 @@
     width: 100%;
 }
 
+.space-between {
+  display: flex;
+  justify-content: space-between;
+}
+
 p {
     margin-top: 5px;
     margin-bottom: 2px;

@@ -1,54 +1,65 @@
 <app-panel>
     <slot>
-        <app-select-input 
-            label="Direção de alinhamento" 
-            [(value)]="values.flexDirection" 
+        <app-select-input
+            label="Direção de alinhamento"
+            [(value)]="values.flexDirection"
             [choices]="cssValues.flexDirection">
         </app-select-input>
-        <app-select-input 
-            label="Alinhamento Vertical" 
-            [(value)]="values.alignItems" 
+        <app-select-input
+            label="Alinhamento Vertical"
+            [(value)]="values.alignItems"
             [choices]="cssValues.alignItems">
         </app-select-input>
-        <app-select-input 
-            label="Alinhamento Horizontal" 
-            [(value)]="values.justifyContent" 
+        <app-select-input
+            label="Alinhamento Horizontal"
+            [(value)]="values.justifyContent"
             [choices]="cssValues.justifyContent">
         </app-select-input>
-        <app-slider-input 
-            label="Altura" 
-            [(value)]="values.height" 
-            [(valuePercent)]="values.heightPercent" 
+        <app-slider-input
+            label="Altura"
+            [(value)]="values.height"
+            [(valuePercent)]="values.heightPercent"
             [(unit)]="values.heightUnit"
             [unitChoices]="cssValues.units">
         </app-slider-input>
-        <app-slider-input 
-            label="Largura" 
+        <app-slider-input
+            label="Largura"
             [(value)]="values.width"
             [(valuePercent)]="values.widthPercent"
             [(unit)]="values.widthUnit"
             [unitChoices]="cssValues.units">
         </app-slider-input>
-        <app-select-input 
-            label="Estilo da Fonte" 
+        <app-select-input
+            label="Estilo da Fonte"
             applyPreviewStyle="font-family"
             [(value)]="values.fontFamily"
             [choices]="cssValues.fonts">
         </app-select-input>
-        <app-slider-input 
+        <app-slider-input
             label="Tamanho da Fonte"
             [(value)]="values.fontSize"
             [(valuePercent)]="values.fontSizePercent"
             [(unit)]="values.fontSizeUnit"
             [unitChoices]="cssValues.fontUnits">
         </app-slider-input>
-        <app-select-input 
+        <app-select-input
             label="Estilo da Fonte"
             applyPreviewStyle="font-style"
-            [(value)]="values.fontStyle" 
+            [(value)]="values.fontStyle"
             [choices]="cssValues.fontStyle">
         </app-select-input>
-
+        <app-multi-direction-input
+          [label]="'Margens'"
+          [(top)]="values.marginTop"
+          [(topUnit)]="values.marginTopUnit"
+          [(bottom)]="values.marginBottom"
+          [(bottomUnit)]="values.marginBottomUnit"
+          [(left)]="values.marginLeft"
+          [(leftUnit)]="values.marginLeftUnit"
+          [(right)]="values.marginRight"
+          [(rightUnit)]="values.marginRightUnit"
+          [unitChoices]="cssValues.units"
+        ></app-multi-direction-input>
     </slot>
 </app-panel>
 

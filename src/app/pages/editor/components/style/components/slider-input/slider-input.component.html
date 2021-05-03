@@ -1,25 +1,25 @@
 <p>{{ label }}</p>
 <nz-row class="full-width">
-    <div nz-col nzSpan="12">
-        <nz-slider 
+    <div nz-col nzSpan="10">
+        <nz-slider
             (ngModelChange)="changeSlider($event)"
-            [nzMin]="1" 
-            [nzMax]="100" 
+            [nzMin]="1"
+            [nzMax]="100"
             [(ngModel)]="valuePercent">
         </nz-slider>
     </div>
-    <div nz-col nzSpan="12">
+    <div nz-col nzSpan="14" class="space-between">
         <nz-input-number
             class="half-left"
             (ngModelChange)="changeValue($event)"
             [(ngModel)]="value"
             [nzMin]="0">
         </nz-input-number>
-        <nz-select 
+        <nz-select
             class="half-right"
             [(ngModel)]="unit"
             (ngModelChange)="changeUnit($event)">
-            <nz-option 
+            <nz-option
                 *ngFor="let choice of unitChoices"
                 [nzValue]="choice['value']"
                 [nzLabel]="choice['label']">

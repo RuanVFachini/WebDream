@@ -1,77 +1,26 @@
 <p>{{ label }}</p>
 <div>
-    <div nz-col nzSpan="12">
-        <nz-input-number
-            class="half-left"
-            (ngModelChange)="onChangeValue($event, 't')"
-            [(ngModel)]="top"
-            [nzMin]="0">
-        </nz-input-number>
-        <nz-select 
-            class="half-right"
-            [(ngModel)]="topUnit"
-            (ngModelChange)="onChangeUnit($event, 't')">
-            <nz-option 
-                *ngFor="let choice of unitChoices"
-                [nzValue]="choice['value']"
-                [nzLabel]="choice['label']">
-            </nz-option>
-        </nz-select>
-    </div>
-    <div nz-col nzSpan="12">
-        <nz-input-number
-            class="half-left"
-            (ngModelChange)="onChangeValue($event, 't')"
-            [(ngModel)]="bottom"
-            [nzMin]="0">
-        </nz-input-number>
-        <nz-select 
-            class="half-right"
-            [(ngModel)]="bottomUnit"
-            (ngModelChange)="onChangeUnit($event, 't')">
-            <nz-option 
-                *ngFor="let choice of unitChoices"
-                [nzValue]="choice['value']"
-                [nzLabel]="choice['label']">
-            </nz-option>
-        </nz-select>
-    </div>
-</div>
-<div>
-    <div nz-col nzSpan="12">
-        <nz-input-number
-            class="half-left"
-            (ngModelChange)="onChangeValue($event, 't')"
-            [(ngModel)]="left"
-            [nzMin]="0">
-        </nz-input-number>
-        <nz-select 
-            class="half-right"
-            [(ngModel)]="leftUnit"
-            (ngModelChange)="onChangeUnit($event, 't')">
-            <nz-option 
-                *ngFor="let choice of unitChoices"
-                [nzValue]="choice['value']"
-                [nzLabel]="choice['label']">
-            </nz-option>
-        </nz-select>
-    </div>
-    <div nz-col nzSpan="12">
-        <nz-input-number
-            class="half-left"
-            (ngModelChange)="onChangeValue($event, 't')"
-            [(ngModel)]="right"
-            [nzMin]="0">
-        </nz-input-number>
-        <nz-select 
-            class="half-right"
-            [(ngModel)]="rightUnit"
-            (ngModelChange)="onChangeUnit($event, 't')">
-            <nz-option 
-                *ngFor="let choice of unitChoices"
-                [nzValue]="choice['value']"
-                [nzLabel]="choice['label']">
-            </nz-option>
-        </nz-select>
-    </div>
+    <div class="flex-line">
+    	<div nz-col nzSpan="10">
+      		<p>Cima</p>
+    	</div>
+      	<div nz-col nzSpan="14" class="space-between">
+          	<nz-input-number
+              	class="width-60"
+              	(ngModelChange)="onChangeValue($event, 't')"
+              	[(ngModel)]="top"
+              	[nzMin]="0">
+          	</nz-input-number>
+        	<nz-select
+              	class="width-60"
+              	[(ngModel)]="topUnit"
+              	(ngModelChange)="onChangeUnit($event, 't')">
+              	<nz-option
+                  	*ngFor="let choice of unitChoices"
+                  	[nzValue]="choice['value']"
+                  	[nzLabel]="choice['label']">
+              	</nz-option>
+          	</nz-select>
+      	</div>
+  	</div>
 </div>
