@@ -1,0 +1,11 @@
+<div 
+    class="in-line">
+    <p>{{ label }}</p>
+    <nz-input-number
+        class="left"
+        (ngModelChange)="change($event)"
+        [(ngModel)]="value"
+        [nzMin]="0.1" [nzMax]="99"
+        [nzStep]="0.1">
+    </nz-input-number>
+</div>

@@ -1,0 +1,9 @@
+<div 
+    [id]="elementId"
+    class="main-div"
+    (dragover)="allowDrop($event)"
+    (drop)="drop($event)"
+    (click)="loadOnStylePanel($event)">
+</div>
+<app-toolbox></app-toolbox>
+<app-style [(element)]="activeOnStyle"></app-style>

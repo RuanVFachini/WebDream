@@ -1,0 +1,18 @@
+<div class="panel" #myPanel>
+    <div class="toolbar"
+        (dblclick)="resetPosition()"
+        (mousemove)="move($event)"
+        (mousedown)="startDragPanel($event)"
+        (mouseup)="endDragPanel($event)"
+        (mouseover)="endDragPanel($event)"
+    >
+        <em 
+            class="toolbar-icon" 
+            nz-icon nzType="drag"
+            nzTheme="outline">
+        </em>
+    </div>
+    <div class="body">
+        <ng-content select="slot"></ng-content>
+    </div>
+</div>

@@ -1,0 +1,35 @@
+.sidebar {
+    width: 150px;
+    background-color: red;
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    transition: transform 1s;
+}
+.sidebar-left {
+    left: 0px;
+}
+
+button.sidebar-btn-left-collapsed {
+    right: -16px;
+}
+
+.sidebar-btn-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 16px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 0px;
+}
+
+.sidebar-left-collapsed {
+    transform: translateX(-100%);
+}
+
+p {
+    font-size: 10pt;
+}

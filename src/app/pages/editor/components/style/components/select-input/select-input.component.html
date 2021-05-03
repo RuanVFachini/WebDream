@@ -1,0 +1,13 @@
+<p>{{ label }}</p>
+<nz-select 
+    class="full-witdh"
+    [(ngModel)]="value"
+    (ngModelChange)="change($event)">
+    <nz-option
+        *ngFor="let choice of choices"
+        [nzCustomContent]="applyPreviewStyle != null"
+        [nzValue]="choice['value']"
+        [nzLabel]="choice['label']">
+        <p [style]="applyPreviewStyle + ':' + choice['value']">{{choice['label']}}</p>
+    </nz-option>
+</nz-select>

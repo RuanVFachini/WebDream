@@ -1,0 +1,29 @@
+<p>{{ label }}</p>
+<nz-row class="full-width">
+    <div nz-col nzSpan="12">
+        <nz-slider 
+            (ngModelChange)="changeSlider($event)"
+            [nzMin]="1" 
+            [nzMax]="100" 
+            [(ngModel)]="valuePercent">
+        </nz-slider>
+    </div>
+    <div nz-col nzSpan="12">
+        <nz-input-number
+            class="half-left"
+            (ngModelChange)="changeValue($event)"
+            [(ngModel)]="value"
+            [nzMin]="0">
+        </nz-input-number>
+        <nz-select 
+            class="half-right"
+            [(ngModel)]="unit"
+            (ngModelChange)="changeUnit($event)">
+            <nz-option 
+                *ngFor="let choice of unitChoices"
+                [nzValue]="choice['value']"
+                [nzLabel]="choice['label']">
+            </nz-option>
+        </nz-select>
+    </div>
+</nz-row>
