@@ -1,6 +1,6 @@
 <p>{{ label }}</p>
 <nz-row class="full-width">
-    <div nz-col nzSpan="10">
+    <div nz-col nzSpan="14">
         <nz-slider
             (ngModelChange)="changeSlider($event)"
             [nzMin]="1"
@@ -8,7 +8,7 @@
             [(ngModel)]="valuePercent">
         </nz-slider>
     </div>
-    <div nz-col nzSpan="14" class="space-between">
+    <div nz-col nzSpan="10" class="space-between">
         <nz-input-number
             class="half-left"
             (ngModelChange)="changeValue($event)"

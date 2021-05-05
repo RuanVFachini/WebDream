@@ -20,6 +20,7 @@ export class CssStyle
     heightUnit: string;
     heightPercent: number = 0;
     fontFamily: string;
+    fontColor: string;
     fontSize: number = 0;
     fontSizePercent: number = 0;
     fontSizeUnit: string;
@@ -40,4 +41,6 @@ export class CssStyle
     paddingLeftUnit: string;
     paddingRight: number = 0;
     paddingRightUnit: string;
+    backgroundImage: string;
+    backgroundPosition: string;
 }

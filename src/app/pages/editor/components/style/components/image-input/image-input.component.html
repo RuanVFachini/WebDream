@@ -1,0 +1,50 @@
+<app-line-block>
+    <slot>
+        <div class="flex-column">
+            <p>{{ label }}</p>
+            <nz-upload
+                class="full-witdh"
+                nzName="image"
+                nzListType="picture-card"
+                [nzShowUploadList]="false"
+                (nzChange)="change($event)">
+                <img [src]="value" style="width: 100%" />
+            </nz-upload>
+        </div>
+        <div class="flex-column">
+            <p>Posicao</p>
+            <nz-select 
+                class="full-witdh"
+                [(ngModel)]="position"
+                (ngModelChange)="changePosition($event)">
+                <nz-option
+                    *ngFor="let choice of positionChoices"
+                    [nzValue]="choice['value']"
+                    [nzLabel]="choice['label']">
+                </nz-option>
+            </nz-select>
+            <p>Repeticao</p>
+            <nz-select 
+                class="full-witdh"
+                [(ngModel)]="repeat"
+                (ngModelChange)="changeRepeat($event)">
+                <nz-option
+                    *ngFor="let choice of repeatChoices"
+                    [nzValue]="choice['value']"
+                    [nzLabel]="choice['label']">
+                </nz-option>
+            </nz-select>
+            <p>Tamanho</p>
+            <nz-select 
+                class="full-witdh"
+                [(ngModel)]="size"
+                (ngModelChange)="changeSize($event)">
+                <nz-option
+                    *ngFor="let choice of sizeChoices"
+                    [nzValue]="choice['value']"
+                    [nzLabel]="choice['label']">
+                </nz-option>
+            </nz-select>
+        </div>
+    </slot>
+</app-line-block>

@@ -1,20 +1,37 @@
 <p>{{ label }}</p>
 <div>
-    <div class="flex-line">
-    	<div nz-col nzSpan="10">
-      		<p>Cima</p>
-    	</div>
-      	<div nz-col nzSpan="14" class="space-between">
+	<div nzSpan="24" class="flex-line">
+		<div nz-col class="group">
+			<nz-input-number
+				class="width-60"
+				(ngModelChange)="onChangeValue($event, 't')"
+				[(ngModel)]="top"
+				[nzMin]="0">
+			</nz-input-number>
+		  <nz-select
+				class="width-60"
+				[(ngModel)]="topUnit"
+				(ngModelChange)="onChangeUnit($event, 't')">
+				<nz-option
+					*ngFor="let choice of unitChoices"
+					[nzValue]="choice['value']"
+					[nzLabel]="choice['label']">
+				</nz-option>
+			</nz-select>
+		</div>
+	</div>
+    <div nzSpan="24" class="flex-line">
+    	<div nz-col class="group">
           	<nz-input-number
               	class="width-60"
-              	(ngModelChange)="onChangeValue($event, 't')"
-              	[(ngModel)]="top"
+              	(ngModelChange)="onChangeValue($event, 'l')"
+              	[(ngModel)]="left"
               	[nzMin]="0">
           	</nz-input-number>
         	<nz-select
               	class="width-60"
-              	[(ngModel)]="topUnit"
-              	(ngModelChange)="onChangeUnit($event, 't')">
+              	[(ngModel)]="leftUnit"
+              	(ngModelChange)="onChangeUnit($event, 'l')">
               	<nz-option
                   	*ngFor="let choice of unitChoices"
                   	[nzValue]="choice['value']"
@@ -22,5 +39,49 @@
               	</nz-option>
           	</nz-select>
       	</div>
-  	</div>
+		<em 
+		  	class="icon"
+			nz-icon
+			nzType="drag"
+			nzTheme="outline">
+		</em>
+		<div nz-col class="group">
+			<nz-input-number
+				class="width-60"
+				(ngModelChange)="onChangeValue($event, 'r')"
+				[(ngModel)]="right"
+				[nzMin]="0">
+			</nz-input-number>
+			<nz-select
+				class="width-60"
+				[(ngModel)]="rightUnit"
+				(ngModelChange)="onChangeUnit($event, 'r')">
+				<nz-option
+					*ngFor="let choice of unitChoices"
+					[nzValue]="choice['value']"
+					[nzLabel]="choice['label']">
+				</nz-option>
+			</nz-select>
+		</div>
+	</div>
+	<div nzSpan="24" class="flex-line">
+		<div nz-col class="group">
+			<nz-input-number
+				class="width-60"
+				(ngModelChange)="onChangeValue($event, 'b')"
+				[(ngModel)]="bottom"
+				[nzMin]="0">
+			</nz-input-number>
+		  <nz-select
+				class="width-60"
+				[(ngModel)]="bottomUnit"
+				(ngModelChange)="onChangeUnit($event, 'b')">
+				<nz-option
+					*ngFor="let choice of unitChoices"
+					[nzValue]="choice['value']"
+					[nzLabel]="choice['label']">
+				</nz-option>
+			</nz-select>
+		</div>
+	</div>
 </div>

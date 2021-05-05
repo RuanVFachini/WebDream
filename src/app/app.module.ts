@@ -17,6 +17,7 @@ import { NzSelectModule } from 'ng-zorro-antd/select';
 import { NzEmptyModule } from 'ng-zorro-antd/empty';
 import { NzSliderModule } from 'ng-zorro-antd/slider';
 import { NzInputNumberModule } from 'ng-zorro-antd/input-number';
+import { NzUploadModule } from 'ng-zorro-antd/upload';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -31,6 +32,9 @@ import { SelectInputComponent } from './pages/editor/components/style/components
 import { SliderInputComponent } from './pages/editor/components/style/components/slider-input/slider-input.component';
 import { NumberInputComponent } from './pages/editor/components/style/components/number-input/number-input.component';
 import { MultiDirectionInputComponent } from './pages/editor/components/style/components/multi-direction-input/multi-direction-input.component';
+import { LineBlockComponent } from './components/line-block/line-block.component';
+import { ColorInputComponent } from './pages/editor/components/style/components/color-input/color-input.component';
+import { ImageInputComponent } from './pages/editor/components/style/components/image-input/image-input.component';
 
 registerLocaleData(en);
 
@@ -45,6 +49,9 @@ registerLocaleData(en);
     SliderInputComponent,
     NumberInputComponent,
     MultiDirectionInputComponent,
+    LineBlockComponent,
+    ColorInputComponent,
+    ImageInputComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,7 +71,8 @@ registerLocaleData(en);
     NzSelectModule,
     NzEmptyModule,
     NzSliderModule,
-    NzInputNumberModule
+    NzInputNumberModule,
+    NzUploadModule
   ],
   providers: [{ provide: NZ_I18N, useValue: en_US }],
   bootstrap: [AppComponent]

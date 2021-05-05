@@ -11,11 +11,19 @@ p {
   width: 60px;
 }
 
-.space-between {
+.group
+group {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
 }
 
 .flex-line {
   display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.icon {
+  font-size: 18px;
+  margin: 5px;
 }

@@ -53,6 +53,6 @@ export class CssValues {
         new SelectModel('Oblíquo', 'oblique'),
         new SelectModel('Inicial', 'initial'),
         new SelectModel('Do Pai', 'inherit'),
-    ]
+    ];
 }
 

@@ -29,12 +29,22 @@
             [(unit)]="values.widthUnit"
             [unitChoices]="cssValues.units">
         </app-slider-input>
-        <app-select-input
-            label="Estilo da Fonte"
-            applyPreviewStyle="font-family"
-            [(value)]="values.fontFamily"
-            [choices]="cssValues.fonts">
-        </app-select-input>
+        <app-line-block>
+            <slot>
+                <app-select-input
+                    class="width-80"
+                    label="Fonte"
+                    applyPreviewStyle="font-family"
+                    [(value)]="values.fontFamily"
+                    [choices]="cssValues.fonts">
+                </app-select-input>
+                <app-color-input
+                    class="width-15"
+                    label="Cor"
+                    [(value)]="values.fontColor">
+                </app-color-input>
+            </slot>
+        </app-line-block>   
         <app-slider-input
             label="Tamanho da Fonte"
             [(value)]="values.fontSize"
@@ -60,6 +70,23 @@
           [(rightUnit)]="values.marginRightUnit"
           [unitChoices]="cssValues.units"
         ></app-multi-direction-input>
+        <app-multi-direction-input
+          [label]="'Espaçamento Interno'"
+          [(top)]="values.paddingTop"
+          [(topUnit)]="values.paddingTopUnit"
+          [(bottom)]="values.paddingBottom"
+          [(bottomUnit)]="values.paddingBottomUnit"
+          [(left)]="values.paddingLeft"
+          [(leftUnit)]="values.paddingLeftUnit"
+          [(right)]="values.paddingRight"
+          [(rightUnit)]="values.paddingRightUnit"
+          [unitChoices]="cssValues.units"
+        ></app-multi-direction-input>
+        <app-image-input
+            [label]="'Imagem'"
+            [(value)]="values.backgroundImage"
+            [(position)]="values.backgroundPosition"
+        ></app-image-input>
     </slot>
 </app-panel>
 
