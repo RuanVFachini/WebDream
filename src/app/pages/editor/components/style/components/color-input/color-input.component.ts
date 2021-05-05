@@ -21,4 +21,9 @@ export class ColorInputComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  ChangeValue(value : string) {
+    this.value = value;
+    this.valueChange.emit(value);
+  }
+
 }

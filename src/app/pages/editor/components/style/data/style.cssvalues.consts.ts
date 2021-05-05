@@ -54,5 +54,37 @@ export class CssValues {
         new SelectModel('Inicial', 'initial'),
         new SelectModel('Do Pai', 'inherit'),
     ];
-}
 
+    backgroundPosition: SelectModel[] = [
+        new SelectModel('Esquerda-Cima', 'left top'),
+        new SelectModel('Esquerda-Centro', 'left center'),
+        new SelectModel('Esquerda-Baixo', 'left bottom'),
+        new SelectModel('Direita-Cima', 'right top'),
+        new SelectModel('Direita-Centro', 'right center'),
+        new SelectModel('Direita-Baixo', 'right bottom'),
+        new SelectModel('Centro-Cima', 'center top'),
+        new SelectModel('Centro-Centro', 'center center'),
+        new SelectModel('Centro-Baixo', 'center bottom'),
+        new SelectModel('Inicial', 'initial'),
+        new SelectModel('Do Pai', 'inherit')
+    ];
+
+    backgroundSize: SelectModel[] = [
+        new SelectModel('Automatico', 'auto'),
+        new SelectModel('Cobrir', 'cover'),
+        new SelectModel('Contendo', 'contain'),
+        new SelectModel('Inicial', 'initial'),
+        new SelectModel('Do Pai', 'inherit')
+    ];
+
+    backgroundRepeat: SelectModel[] = [
+        new SelectModel('Repetir', 'repeat'),
+        new SelectModel('Repetir-Horizontal', 'repeat-x'),
+        new SelectModel('Repetir-Vertical', 'repeat-y'),
+        new SelectModel('Não Repetir', 'no-repeat'),
+        new SelectModel('Espaço', 'space'),
+        new SelectModel('Contorno', 'round'),
+        new SelectModel('Inicial', 'initial'),
+        new SelectModel('Do Pai', 'inherit')
+    ];
+}

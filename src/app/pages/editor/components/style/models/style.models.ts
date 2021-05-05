@@ -43,4 +43,6 @@ export class CssStyle
     paddingRightUnit: string;
     backgroundImage: string;
     backgroundPosition: string;
+    backgroundSize: string;
+    backgroundRepeat: string;
 }

@@ -38,13 +38,24 @@ export class ImageInputComponent implements OnInit {
   @Output()
   sizeChange : EventEmitter<string>;
 
+  @Input()
+  color: string;
+  @Output()
+  colorChange : EventEmitter<string>;
+
   constructor() {
     this.valueChange = new EventEmitter<string>();
     this.positionChange = new EventEmitter<string>();
     this.repeatChange = new EventEmitter<string>();
     this.sizeChange = new EventEmitter<string>();
+    this.colorChange = new EventEmitter<string>();
   }
   ngOnInit(): void {
+  }
+
+  changeColor(value : string) : void {
+    this.color = value;
+    this.colorChange.emit(value);
   }
 
   changePosition(value : string) : void {

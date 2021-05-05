@@ -83,9 +83,14 @@
           [unitChoices]="cssValues.units"
         ></app-multi-direction-input>
         <app-image-input
-            [label]="'Imagem'"
+            [label]="'Fundo'"
             [(value)]="values.backgroundImage"
             [(position)]="values.backgroundPosition"
+            [(size)]="values.backgroundSize"
+            [(repeat)]="values.backgroundRepeat"
+            [sizeChoices]="cssValues.backgroundSize"
+            [positionChoices]="cssValues.backgroundPosition"
+            [repeatChoices]="cssValues.backgroundRepeat"
         ></app-image-input>
     </slot>
 </app-panel>
