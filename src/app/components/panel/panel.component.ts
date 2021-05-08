@@ -1,7 +1,5 @@
 import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
 
-import Point from './panel.model';
-
 @Component({
   selector: 'app-panel',
   templateUrl: './panel.component.html',
@@ -15,9 +13,15 @@ export class PanelComponent implements OnInit {
   private referenceDistanceX = 0;
   private referenceDistanceY = 0;
 
+  collapsed:boolean = false;
+
   constructor() {}
 
   ngOnInit(): void {
+  }
+
+  setCollapse(collapse: boolean) : void {
+    this.collapsed = collapse;
   }
 
   startDragPanel(event : MouseEvent) : void {
@@ -54,6 +58,7 @@ export class PanelComponent implements OnInit {
   }
 
   moveTo(x: number, y: number) : void {
-    this.myPanel.nativeElement.style.transform = "translate(" + x + "px, "+ y +"px)";
+    this.myPanel.nativeElement.style.transform = `translate( ${x}px, ${y}px)`;
+    this.myPanel.nativeElement.style.height = `calc(100% - ${y}px - 40px)`
   }
 }

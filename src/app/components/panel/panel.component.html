@@ -6,13 +6,32 @@
         (mouseup)="endDragPanel($event)"
         (mouseover)="endDragPanel($event)"
     >
-        <em 
-            class="toolbar-icon" 
-            nz-icon nzType="drag"
-            nzTheme="outline">
-        </em>
+        <div class="half-left">
+            <em 
+                class="toolbar-icon" 
+                nz-icon nzType="drag"
+                nzTheme="outline">
+            </em>
+        </div>
+        <div class="half-right">
+            <em
+                *ngIf="!collapsed; else collapsedTemplate"
+                (click)="setCollapse(true)"
+                class="toolbar-hide" 
+                nz-icon nzType="caret-up"
+                nzTheme="outline">
+            </em>
+            <ng-template #collapsedTemplate>
+                <em
+                    (click)="setCollapse(false)"
+                    class="toolbar-hide" 
+                    nz-icon nzType="caret-down"
+                    nzTheme="outline">
+                </em>
+            </ng-template>
+        </div>
     </div>
-    <div class="body">
+    <div class="body" [class.hide]="collapsed">
         <ng-content select="slot"></ng-content>
     </div>
 </div>

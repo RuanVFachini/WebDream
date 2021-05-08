@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { CssStyle } from 'src/app/shared/models/css-style.model';
 import { CssValues } from './data/style.cssvalues.consts';
-import { CssStyle } from './models/style.models';
 
 @Component({
   selector: 'app-style',

@@ -1,4 +1,6 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { ElementsList } from './data/elements.consts';
+import { CustomElement } from './models/element.models';
 
 
 @Component({
@@ -8,38 +10,16 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 })
 export class ToolboxComponent implements OnInit {
 
-  elements = [];
+  elements: CustomElement[];
 
   constructor() {
-
-    this.elements.push({
-      node: () => {
-        var regionNode = document.createElement('div');
-        regionNode.style.width = "100%";
-        regionNode.style.height = "50px";
-        regionNode.style.backgroundColor = "blue";
-        regionNode.style.display = "flex";
-        return regionNode;
-      },
-      description: 'Região Azul',
-    },
-    {
-      node: () => {
-        var regionNode = document.createElement('div');
-        regionNode.style.width = "100%";
-        regionNode.style.height = "50px";
-        regionNode.style.backgroundColor = "red";
-        regionNode.style.display = "flex";
-        return regionNode;
-      },
-      description: 'Região Vermelha',
-    });
+    this.elements = ElementsList.default
   }
 
   ngOnInit(): void {
   }
 
-  setDataTransfer(dragEvent: any, element: any) : void {
-    window['newElement'] = element.node();
+  setDataTransfer(dragEvent: any, item: CustomElement) : void {
+    window['newElement'] = item.element.cloneNode(true);
   }
 }

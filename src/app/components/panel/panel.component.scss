@@ -34,3 +34,25 @@
     font-size: 18px;
     margin-left: 5px;
 }
+
+.toolbar-hide {
+    font-size: 18px;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+.half-left {
+    width: 50%;
+    display: flex;
+}
+
+.half-right {
+    width: 50%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hide {
+    height: 0px;
+    overflow: hidden;
+}

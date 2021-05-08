@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { NgxsModule } from '@ngxs/store';
 import { NZ_I18N } from 'ng-zorro-antd/i18n';
 import { en_US } from 'ng-zorro-antd/i18n';
 import { registerLocaleData } from '@angular/common';
@@ -24,9 +23,6 @@ import { AppComponent } from './app.component';
 import { EditorComponent } from './pages/editor/editor.component';
 import { StyleComponent } from './pages/editor/components/style/style.component';
 import { ToolboxComponent } from './pages/editor/components/toolbox/toolbox.component';
-import { environment } from 'src/environments/environment';
-import { EditorState } from './stores/editor/editor.store';
-import { NgxsStoragePluginModule } from '@ngxs/storage-plugin';
 import { PanelComponent } from './components/panel/panel.component';
 import { SelectInputComponent } from './pages/editor/components/style/components/select-input/select-input.component';
 import { SliderInputComponent } from './pages/editor/components/style/components/slider-input/slider-input.component';
@@ -60,10 +56,6 @@ registerLocaleData(en);
     ReactiveFormsModule,
     HttpClientModule,
     BrowserAnimationsModule,
-    NgxsModule.forRoot([EditorState], {
-      developmentMode: !environment.production
-    }),
-    NgxsStoragePluginModule.forRoot(),
     NzIconModule,
     NzCardModule,
     NzListModule,

@@ -36,6 +36,7 @@ export class EditorComponent implements OnInit {
 
     let target = <HTMLElement> dropevent.target;
     let droped = <HTMLElement> window['newElement'];
+    
     droped.id = this.generateId();
     droped.addEventListener("click", (event) => this.loadOnStylePanel(event));
     target.appendChild(droped);
