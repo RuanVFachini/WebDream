@@ -3,7 +3,7 @@ export class CustomElement {
     description: string;
 
     constructor(element: HTMLElement, description: string) {
-        this.element = element;
-        this.description = description;
+      this.element = element;
+      this.description = description;
     }
 }

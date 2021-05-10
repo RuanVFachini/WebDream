@@ -31,6 +31,9 @@ import { MultiDirectionInputComponent } from './pages/editor/components/style/co
 import { LineBlockComponent } from './components/line-block/line-block.component';
 import { ColorInputComponent } from './pages/editor/components/style/components/color-input/color-input.component';
 import { ImageInputComponent } from './pages/editor/components/style/components/image-input/image-input.component';
+import { TableOptionsComponent } from './pages/editor/components/table-options/table-options.component';
+import { ListOptionsComponent } from './pages/editor/components/list-options/list-options.component';
+import { SimplePanelComponent } from './components/simple-panel/simple-panel.component';
 
 registerLocaleData(en);
 
@@ -48,6 +51,9 @@ registerLocaleData(en);
     LineBlockComponent,
     ColorInputComponent,
     ImageInputComponent,
+    TableOptionsComponent,
+    ListOptionsComponent,
+    SimplePanelComponent,
   ],
   imports: [
     BrowserModule,

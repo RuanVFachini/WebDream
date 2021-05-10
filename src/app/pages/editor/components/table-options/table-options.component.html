@@ -1,0 +1,9 @@
+<app-simple-panel
+  *ngIf="element != null"
+  [x]="getX()"
+  [y]="getY()">
+  <slot>
+    <p>table-options works!</p>
+  </slot>
+</app-simple-panel>
+
