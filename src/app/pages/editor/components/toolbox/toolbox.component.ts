@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ElementTransfer } from 'src/app/shared/models/element-transfer.model';
 import { ElementsList } from './data/elements.consts';
 import { CustomElement } from './models/element.models';
 
@@ -20,6 +21,6 @@ export class ToolboxComponent implements OnInit {
   }
 
   setDataTransfer(dragEvent: any, item: CustomElement) : void {
-    window['newElement'] = item.element.cloneNode(true);
+    window['newElement'] = new ElementTransfer(item.element.cloneNode(true), item.description);
   }
 }

@@ -1,1 +1,15 @@
-<p>list-options works!</p>
+<app-simple-panel
+  *ngIf="element != null"
+  [x]="getX()"
+  [y]="getY()"
+  [width]="getWidth()"
+  [height]="getHeight()">
+  <slot>
+    <button 
+      nz-button 
+      nzType="primary"
+      (click)="AddColumn()">
+      Adicioanr Item
+    </button>
+  </slot>
+</app-simple-panel>
